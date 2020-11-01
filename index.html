@@ -1,1 +1,155 @@
-boot
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<title>TStar-BOOT</title>
+	<link rel="shortcut icon" type="image/png" href="images/trx.svg" sizes="16x16">
+	<link rel="shortcut icon" type="image/png" href="images/trx.svg" sizes="32x32">
+	<link rel="shortcut icon" type="image/png" href="images/trx.svg" sizes="64x64">
+	<link rel="shortcut icon" type="image/png" href="images/trx.svg" sizes="96x96">
+	<link rel="shortcut icon" type="image/png" href="images/trx.svg" sizes="180x180">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/trx.svg">
+	<link rel="android-touch-icon" sizes="180x180" href="images/trx.svg">
+	<link href="css/all.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/animation.css" rel="stylesheet">
+	<link href="css/adaptive.css" rel="stylesheet">
+	<script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+	<div class="langblock">
+		<a href="/index.html" class="langwrap langwrap_en"><img src="images/eng2.svg" alt=""></a>
+		<a href="/cn/index.html" class="langwrap langwrap_zh"><img src="images/chi2.svg" alt=""></a>
+	</div>
+	<div class="wrapper">
+		<div class="content">
+			<div class="mainback">
+				<div class="reviewblock">
+					<div class="wrap">
+						<h2 data-scroll="toggle(.fromTopIn, .fromTopOut)">DEFI BOOT</h2>
+						<div class="reviewwrap">
+							<div class="stepsblock stepsblockfull2" style="line-height:12px;border-top:0px">
+								<h4 style="line-height:30px;font-size:16px;">
+									DEFI BOOT is a tool for teams with marketing capabilities to start blockchain DEFI
+									projects with one click. You can define your own rules, project names, website
+									colors, etc. Almost all profits are returned 
+								</h4>
+								<h3 style="line-height:20px;font-size:16px;display:none;" id="notcreate">You have not
+									created a project <a href="#project" style="color:aqua;text-decoration:none">Create
+										now</a></h3>
+								<div style="margin-top: 15px;font-size: 16px;display:none;" id="content">
+									<div style="color:#fff;margin-top:18px;">Url &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="pname"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Name &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="url"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Min invest &nbsp;<b style="color:aqua"
+											id="min">
+											- </b></div>
+									<div style="color:#fff;margin-top:18px;">Base rate &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="baseRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Hold rate &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="holdRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Market reward &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="maketRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Refer reward &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="invite"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Node &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="level"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Reciver address &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="reciver"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Web theme
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:aqua" id="theme"> -
+										</b></div>
+									<div style="color:#fff;margin-top:18px;">Telegram &nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="telegram"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Discord
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:aqua" id="discord"> - </b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="remodal" data-remodal-id="project">
+			<h1>Create Project</h1>
+			<div class="modaldesc">
+				<form class="maincontform">
+					<div style="color:#fff;text-align: left;margin-top: 10px;margin-bottom: 10px;font-size: 15px;">
+						Name (<span style="color: aqua;">Display unique project name, not duplicated with other
+							projects</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1"
+						placeholder="Enter English letters, the length must be greater than 3 characters" value=""
+						id="name" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Min invest (<span style="color: aqua;">The user's single smallest investment amount(TRX)</span>)
+					</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="100"
+						placeholder="" id="minV" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Base rate(<span style="color: aqua;">Fixed interest rate, reward coefficient
+							percentage(%)</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="1"
+						placeholder="" value="" id="rate" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Hold rate (<span style="color: aqua;">Accumulated interest rate every 24 hours(%)</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="0.1"
+						id="hold_rate" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Market reward (<span style="color: aqua;">Reward ratio allocated to the market(%)</span>) </div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="3"
+						placeholder="" value="" id="market" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Refer (<span style="color: aqua;"> Refer 5,3,1 to represent Level 3, Level 1 5%, Level 2 3%,
+							Level 3 1%</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" placeholder=""
+						value="5,3,1" id="inviteV" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Node level (<span style="color: aqua;">Max level</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" placeholder=""
+						value="5" id="nodelevel" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Node upgrade price (<span style="color: aqua;">The cost per level (TRX), 0 To 1 = 1 * Price，1 To
+							2 = 2 * Price</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="40000"
+						placeholder="" id="node" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Reciver address (<span style="color: aqua;">Node upgrade, receiving address of market
+							revenue</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="" value="" id="addr" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Theme (<span style="color: aqua;">Project webpage theme color, generate a brand new
+							webpage</span>)</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="39d2c4"
+						placeholder="" id="them" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Telegram</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="" value="" id="telegrame" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Discord</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="" value="" id="discordi" style="margin-top:15px">
+
+					<a href="javascript:void(0)" id="subpay" onclick="createSubmit()" class="maindescbut investButton1"
+						style="background-color: aqua;border-bottom:0px">Pay 100000 TRX Create</a>
+				</form>
+			</div>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/cbpAnimatedHeader.min.js"></script>
+		<script src="js/parallax.js"></script>
+		<script src="js/remodal.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+		<script src="js/TronWeb.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/jquery-en.min.js"></script>
+</body>
+
+</html>
