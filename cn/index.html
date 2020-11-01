@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<title>TStar-BOOT</title>
+	<link rel="shortcut icon" type="image/png" href="../images/trx.svg" sizes="16x16">
+	<link rel="shortcut icon" type="image/png" href="../images/trx.svg" sizes="32x32">
+	<link rel="shortcut icon" type="image/png" href="../images/trx.svg" sizes="64x64">
+	<link rel="shortcut icon" type="image/png" href="../images/trx.svg" sizes="96x96">
+	<link rel="shortcut icon" type="image/png" href="../images/trx.svg" sizes="180x180">
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/trx.svg">
+	<link rel="android-touch-icon" sizes="180x180" href="../images/trx.svg">
+	<link href="../css/all.css" rel="stylesheet" type="text/css" />
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/animation.css" rel="stylesheet">
+	<link href="../css/adaptive.css" rel="stylesheet">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="langblock">
+		<a href="/index.html" class="langwrap langwrap_en"><img src="../images/eng2.svg" alt=""></a>
+		<a href="/cn/index.html" class="langwrap langwrap_zh"><img src="../images/chi2.svg" alt=""></a>
+	</div>
+	<div class="wrapper">
+		<div class="content">
+			<div class="mainback">
+				<div class="reviewblock">
+					<div class="wrap">
+						<h2 data-scroll="toggle(.fromTopIn, .fromTopOut)">DEFI启动器</h2>
+						<div class="reviewwrap">
+							<div class="stepsblock stepsblockfull2" style="line-height:12px;border-top:0px">
+								<h4 style="line-height:30px;font-size:16px;">
+									DEFI启动器是为有市场推广能力的团队提供一键启动区块链DEFI项目的一个工具，您可自己定义规则，项目名称，网站颜色等，几乎所有利润都归创建者
+								</h4>
+								<h3 style="line-height:20px;font-size:16px;display:none;" id="notcreate">您还未创建项目，<a
+										href="#project" style="color:aqua;text-decoration:none">立即创建</a></h3>
+								<div style="margin-top: 15px;font-size: 16px;display:none;" id="content">
+									<div style="color:#fff;margin-top:18px;">项目地址 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="pname"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">项目名称 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="url"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">最小投资额 &nbsp;<b style="color:aqua" id="min">
+											- </b></div>
+									<div style="color:#fff;margin-top:18px;">基础利率 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="baseRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">持有利率 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="holdRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">市场奖励 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="maketRate"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">推荐返佣 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="invite"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">节点级别 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="level"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">收款地址 &nbsp;&nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="reciver"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">主题色
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:aqua" id="theme"> -
+										</b></div>
+									<div style="color:#fff;margin-top:18px;">Telegram &nbsp;&nbsp;&nbsp;<b
+											style="color:aqua" id="telegram"> - </b></div>
+									<div style="color:#fff;margin-top:18px;">Discord
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:aqua" id="discord"> - </b>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="remodal" data-remodal-id="project">
+			<h1>创建项目</h1>
+			<div class="modaldesc">
+				<form class="maincontform">
+					<div style="color:#fff;text-align: left;margin-top: 10px;margin-bottom: 10px;font-size: 15px;">
+						项目名称（<span style="color: aqua;">显示独有的项目名称，与其他项目不重复</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1"
+						placeholder="输入英文字母，长度必须大于3位" value="" id="name" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						最小投资额（<span style="color: aqua;">用户单次最小的投资金额(TRX)</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="100"
+						placeholder="最小投资金额" id="minV" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						基础利率（<span style="color: aqua;">固定利率，奖励系数百分比(%)</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="1"
+						placeholder="建议填写1" value="" id="rate" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						持有利率（<span style="color: aqua;">每24小时累加的利率(%)</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="0.1"
+						id="hold_rate" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						市场奖励（<span style="color: aqua;">分配给市场的奖励比例(%)</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="3"
+						placeholder="建议填写3" value="" id="market" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						推荐返佣（<span style="color: aqua;">推荐返佣5,3,1代表3级，一级5%，二级3%，三级1%</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" placeholder=""
+						value="5,3,1" id="inviteV" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						节点最大级别（<span style="color: aqua;">最多能升多少级</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" placeholder="建议填写5"
+						value="5" id="nodelevel" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						节点升级费用（<span style="color: aqua;">每升一级需要支付的费用(TRX)，0升1 = 1*节点升级费用，1升2 = 2*节点升级费用</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="40000"
+						placeholder="建议填写40000" id="node" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						收款地址（<span style="color: aqua;">节点升级，市场收益的接收地址</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="TRON钱包地址" value="" id="addr" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						主题色（<span style="color: aqua;">项目网页主题色，生成全新的网页</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value="39d2c4"
+						placeholder="可不填写" id="them" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Telegram（<span style="color: aqua;">社交链接</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="可不填写" value="" id="telegrame" style="margin-top:15px">
+					<div style="color:#fff;text-align: left;margin-top: 20px;margin-bottom: 10px;font-size: 15px;">
+						Discord（<span style="color: aqua;">社交链接</span>）</div>
+					<input type="text" style="text-align: left;font-size: 14px;" class="trxAmount1" value=""
+						placeholder="可不填写" value="" id="discordi" style="margin-top:15px">
+					<a href="javascript:void(0)" id="subpay" onclick="createSubmit()" class="maindescbut investButton1"
+						style="background-color: aqua;border-bottom:0px">支付 100000 TRX
+						创建项目</a>
+				</form>
+			</div>
+		</div>
+		<script src="../js/classie.js"></script>
+		<script src="../js/cbpAnimatedHeader.min.js"></script>
+		<script src="../js/parallax.js"></script>
+		<script src="../js/remodal.min.js"></script>
+		<script src="../js/ScrollTrigger.min.js"></script>
+		<script src="../js/TronWeb.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/jquery-cn.min.js"></script>
+</body>
+
+</html>
